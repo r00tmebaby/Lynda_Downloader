@@ -17,14 +17,7 @@ The script will create categgory and course name folders automatically and downl
 4. Install Chromedriver
 
 # Configuration
-1. Fill your login credentials in config.py
-
-<code><b><p>login_in = True</p><p>username = "Your username here"</p><p>password ="Your password here" </p></b></code>
- 
-2. The next step is to fill this part:
-
-<code><b><p>page = "" # Login URL</p><p>save_dir= r"C:\\Tutorials\\" # Saving Files Main Directory</p><p>finished_list = r"logs.txt"# File that will log all downloaded course directories so the .zip archives can be moved later</p><p>course_list   = r"C:\\download_list.txt"  # All courses that we want to be downloaded. Courses list</p><p>zip_download  = r"C:\\Download\\"# Directory that will be used to download zip archives, they will be moved to their folders at the end</p></b></code>
-
-3. You have to create a donwload list manualy with the links to the courses that you want to download
-4. Run the script by typing lindi.py and it will do the work for you.
+1. Specify your login credentials in config.py, login url, courses list file destination, chromedriver destination and main download folder
+2. You have to create a donwload list manualy with the links to the courses that you want to download
+3. Run the script by typing lindi.py and it will do the work for you.
 
