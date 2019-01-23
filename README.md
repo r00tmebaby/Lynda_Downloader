@@ -5,7 +5,7 @@ Lynda Downloader is a python script that uses Selenium Driver and is capable to 
 
 The idea of this scrtipt was to be able to download multiple courses with a given list along with their excersize files and information about each course and then to display them directly on a private library website, without the need of touching anything else. It also dump the video duration from the download link and concat the information in the video name, so you can extract it direclty without the need to use additional calculations.
 
-The script will create categgory and course name folders automatically and download the video files inside it. That is very helpfull if you want to create a private library or to build similar like Lynda.com website.</br>
+The script will create categgory and course name folders automatically and download the video files inside along with log.txt file in which all downloaded videos paths will be recorder. After the download completion you can move all .zip files to the related course. That is helpfull if you want to create a private library or to build similar to Lynda.com website.</br>
 
 
 # Requirements
