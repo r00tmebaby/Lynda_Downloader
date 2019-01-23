@@ -7,6 +7,8 @@ The idea of this scrtipt was to be able to download multiple courses with a give
 
 The script will create categgory and course name folders automatically and download the video files inside along with log.txt file in which all downloaded videos paths will be recorder. After the download completion you can move all .zip files to the related course. That is helpfull if you want to create a private library or to build similar to Lynda.com website.</br>
 
+In suppport for this script I have developed a <a href="https://github.com/r00tmebaby/LyndaWebSite"> LyndaWeb</a>  where all downloaded videos can be displayed and accessed easily.
+
 
 # Requirements
 1. Python 3+ installed </br>
