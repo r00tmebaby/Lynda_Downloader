@@ -111,8 +111,9 @@ for items_for_download in open(Config.course_list, "r"):
     elementss2 = driver.find_element_by_id('tab-overview').get_attribute('innerHTML')
     time.sleep(0.2)
 
-    f = open(Config.save_dir + r"\\" + cat_name + r"\\" + course_name + r"\info.php", "a+", encoding="utf-8")
-    f.write(elementss2)
+    if not main.file_exist(Config.save_dir + r"\\" + cat_name + r"\\" + course_name + r"\info.php") or os.stat(Config.save_dir + r"\\" + cat_name + r"\\" + course_name + r"\info.php").st_size == 0: 
+       f = open(Config.save_dir + r"\\" + cat_name + r"\\" + course_name + r"\info.php", "a+", encoding="utf-8")
+       f.write(elementss2)
 
     counter = 0  # Will count the loops - Just for the function
     temp_counter = 0  # Will count only the successfully downloaded videos for the current course
