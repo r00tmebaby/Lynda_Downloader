@@ -188,9 +188,19 @@ for items_for_download in open(Config.course_list, "r"):
 
     # Going trough every link in the array
     for i in listsak:
-        time.sleep(0.5)
-        driver.get(i)   # Opening the video link
         counter += 1
+        try:
+             driver.get(i)   # Opening the video link     
+        except:
+            time.sleep(0.1)
+            try:
+                driver.get(i)   # Opening the video link   
+            except:
+                time.sleep(0.3)
+                try:
+                    driver.get(i)   # Opening the video link 
+                except:
+                         driver.get(i)   # Opening the video link 
         
         # Trying to click on play video button, if that did not work will look for modal close button and click on it
         try:
