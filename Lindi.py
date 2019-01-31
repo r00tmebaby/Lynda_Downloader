@@ -182,7 +182,16 @@ for items_for_download in open(Config.course_list, "r"):
         time.sleep(0.5)
         driver.get(i)   # Opening the video link
         counter += 1
-        WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.ID, "banner-play"))).click()
+        
+        # Trying to click on play video button, if that did not work will look for modal close button and click on it
+        try:
+           WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.ID, "banner-play"))).click()
+        except:
+            # Trying to click on modal closing button
+            driver.find_element_by_class_name("close").click()
+            time.sleep(0.3)
+            WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.ID, "banner-play"))).click()
+            
         # 1 seconds waiting time works for my internet connection speed, but may not work with yours
         # If you see an error message url="" (an empty url), increase this sleeping time value
         time.sleep(1)
