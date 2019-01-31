@@ -2,6 +2,7 @@
 
 ## 1.1 (2019-31-01)
 Bugfixes:
+  - Fixed "Can not get video url" message. Slow internet connection needs more time to get the video links
   - Fixed modal popup message "Course Retiring Soon" that shows up on some courses  
 
 ## 1.0 (2019-29-01)
