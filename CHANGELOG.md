@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1 (2019-31-01)
+Bugfixes:
+  - Fixed modal popup message "Course Retiring Soon" that shows up on some courses  
 
 ## 1.0 (2019-29-01)
 
