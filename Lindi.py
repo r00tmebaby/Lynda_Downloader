@@ -99,6 +99,8 @@ for items_for_download in open(Config.course_list, "r"):
     # Searching for a modal message and trying to close it
     try:
        driver.find_element_by_class_name("close").click()
+       driver.find_element_by_class_name("close").click()
+       time.sleep(0.2)
     except:
         pass
      
