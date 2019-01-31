@@ -95,6 +95,13 @@ done = True  # Resetting the loading animation
 for items_for_download in open(Config.course_list, "r"):
     normal_list = items_for_download.split("?")
     driver.get(normal_list[0])
+   
+    # Searching for a modal message and trying to close it
+    try:
+       driver.find_element_by_class_name("close").click()
+    except:
+        pass
+     
     cat_name = items_for_download.split("/")[3]
     if len(cat_name) == 0:
         cat_name =  items_for_download.split("/")[4]
