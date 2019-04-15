@@ -96,12 +96,10 @@ for items_for_download in open(Config.course_list, "r"):
     normal_list = items_for_download.split("?")
     driver.get(normal_list[0])
    
-    # Searching for a modal message and trying to close it
-    try:
-       driver.find_element_by_class_name("close").click()
-       driver.find_element_by_class_name("close").click()
-       time.sleep(0.2)
-    except:
+    # Discard courses which are going to be retired soon
+    if "Course Retiring Soon" in driver.page_source:
+        continue
+    else:
         pass
      
     cat_name = items_for_download.split("/")[3]
